@@ -1,0 +1,19 @@
+.light {
+  color:
+  #FFF  /* primary */
+  #00458B /* secondary */
+  #99DDFF /* accent */
+  #3FD2C7 /* highlight */
+  #FFF  /* lightest */
+  #00458B /* darkest */
+}
+
+.dark {
+  color:
+  #051622 /* primary */
+  #1BA098 /* secondary */
+  #DEB992 /* accent */
+  #EEE /* highlight */
+  #EEE /* lightest */
+  #051622 /* darkest */
+}

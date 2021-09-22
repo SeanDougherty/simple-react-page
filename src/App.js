@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ThemeSelector from "./components/Utility/ThemeSelector";
+import ThemeToggler from "./components/Buttons/ThemeToggler";
+import Landing from "./components/Landing";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import { createUseStyles } from "react-jss";
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeSelector>
+      <div className={classes.singlePage}>
+        <Landing />
+        <About />
+        <Experience />
+        <Projects />
+        <ThemeToggler />
+      </div>
+    </ThemeSelector>
   );
 }
+
+const useStyles = createUseStyles((theme) => ({
+  singlePage: {
+    display: "flex",
+    flexDirection: "column",
+  },
+}));
 
 export default App;
