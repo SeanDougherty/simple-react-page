@@ -3,6 +3,7 @@ import Collapsible from "./Utility/Collapsible";
 import { ReactComponent as Diving } from "../resources/diving.svg";
 import { ReactComponent as Gardening } from "../resources/gardening.svg";
 import { ReactComponent as Meditating } from "../resources/meditating.svg";
+import FadeIntoView from "./Utility/FadeIntoView";
 
 const About = (props) => {
   const classes = useStyles();
@@ -12,9 +13,15 @@ const About = (props) => {
         <div className={classes.header}>
           <h2>Who am I?</h2>
           <div className={classes.hobbies}>
-            <Gardening />
-            <Diving />
-            <Meditating />
+            <FadeIntoView delay={0}>
+              <Gardening />
+            </FadeIntoView>
+            <FadeIntoView delay={50}>
+              <Diving />
+            </FadeIntoView>
+            <FadeIntoView delay={100}>
+              <Meditating />
+            </FadeIntoView>
           </div>
         </div>
         <hr />
@@ -28,7 +35,7 @@ const About = (props) => {
         </p>
       </div>
       <Collapsible>
-        <h3>My story</h3>
+        <h2>My story</h2>
         <hr />
         <p>
           I earned a B.S. in Biomedical Engineering with a minor in Computer
@@ -71,7 +78,8 @@ const useStyles = createUseStyles((theme) => ({
     backgroundColor: theme.colorSecondary,
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
+    minHeight: "80vh",
     color: theme.colorPrimary,
     transition: [["background-color", "0.2s", "ease"]],
     "& > *": {
@@ -125,14 +133,15 @@ const useStyles = createUseStyles((theme) => ({
     },
   },
   hobbies: {
-    "& > svg": {
+    display: "flex",
+    "& > div > svg": {
       width: "50px",
       marginLeft: "0.5rem",
       "& > g > path:first-of-type": {
         fill: [[theme.colorAccent], "!important"],
       },
     },
-    "& > svg:last-of-type": {
+    "& > div > svg:last-of-type": {
       marginRight: "1rem",
     },
   },
