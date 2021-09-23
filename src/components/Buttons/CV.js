@@ -5,7 +5,12 @@ const CV = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.icon}>
-      <Icon />
+      <a
+        href="https://drive.google.com/file/d/1TIi0mNwrfWISJ61oD-ABq9qrf7rkkm6A/view?usp=sharing"
+        target="_blank"
+        rel="noreferrer">
+        <Icon />
+      </a>
     </div>
   );
 };

@@ -5,7 +5,12 @@ const Github = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.icon}>
-      <Icon />
+      <a
+        href="https://github.com/seandough3rty"
+        target="_blank"
+        rel="noreferrer">
+        <Icon></Icon>
+      </a>
     </div>
   );
 };

@@ -5,7 +5,12 @@ const LinkedIn = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.icon}>
-      <Icon />
+      <a
+        href="https://www.linkedin.com/in/sean-dougherty-cs/"
+        target="_blank"
+        rel="noreferrer">
+        <Icon />
+      </a>
     </div>
   );
 };

@@ -43,10 +43,6 @@ const useStyles = createUseStyles((theme) => ({
       marginRight: 5,
       color: theme.colorPrimary,
     },
-    animationName: "$float",
-    animationDuration: "6s",
-    animationIterationCount: "infinite",
-    animationTimingFunction: "ease-in-out",
   },
   toggleSwitch: {
     position: "relative",
