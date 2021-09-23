@@ -18,11 +18,15 @@ const CV = (props) => {
 const useStyles = createUseStyles((theme) => ({
   icon: {
     width: "60px",
+    height: "60px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: theme.colorAccent,
     borderRadius: "30px",
+    "& > a": {
+      height: 46,
+    },
   },
 }));
 

@@ -17,7 +17,7 @@ const LinkedIn = (props) => {
 
 const useStyles = createUseStyles((theme) => ({
   icon: {
-    minWidth: "60px",
+    width: "60px",
   },
 }));
 

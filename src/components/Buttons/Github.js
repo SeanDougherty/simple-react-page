@@ -9,7 +9,7 @@ const Github = (props) => {
         href="https://github.com/seandough3rty"
         target="_blank"
         rel="noreferrer">
-        <Icon></Icon>
+        <Icon />
       </a>
     </div>
   );
