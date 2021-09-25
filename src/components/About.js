@@ -8,7 +8,7 @@ import FadeIntoView from "./Utility/FadeIntoView";
 const About = (props) => {
   const classes = useStyles();
   return (
-    <div className={classes.page}>
+    <section className={classes.page}>
       <div className={classes.bio}>
         <div className={classes.header}>
           <h2>Who am I?</h2>
@@ -69,7 +69,7 @@ const About = (props) => {
         I am currently seeking a position as a Software Engineer in the United
         States.
       </p>
-    </div>
+    </section>
   );
 };
 

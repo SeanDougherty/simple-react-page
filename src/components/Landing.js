@@ -8,7 +8,7 @@ import CV from "./Buttons/CV";
 const Landing = (props) => {
   const classes = useStyles();
   return (
-    <div className={classes.page}>
+    <section className={classes.page}>
       <span id="profile-photo">
         <img src={sean} alt="Sean Dougherty" />
       </span>
@@ -28,7 +28,7 @@ const Landing = (props) => {
         <p>more below</p>
         <DownArrow />
       </div>
-    </div>
+    </section>
   );
 };
 

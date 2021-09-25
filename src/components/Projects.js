@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 const Projects = (props) => {
   const classes = useStyles();
 
-  return <div className={classes.page}>Projects</div>;
+  return <section className={classes.page}>Projects</section>;
 };
 
 const useStyles = createUseStyles((theme) => ({
