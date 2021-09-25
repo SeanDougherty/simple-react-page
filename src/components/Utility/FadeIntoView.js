@@ -3,11 +3,15 @@ import { createUseStyles } from "react-jss";
 
 const FadeIntoView = (props) => {
   const delay = props.delay ? props.delay + "ms" : "";
-  const [isVisible, setVisible] = useState(true);
+  const [isVisible, setVisible] = useState(false);
   const domRef = useRef();
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+        }
+      });
     });
     observer.observe(domRef.current);
     return () => observer.unobserve(domRef.current);
