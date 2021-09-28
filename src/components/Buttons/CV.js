@@ -24,8 +24,24 @@ const useStyles = createUseStyles((theme) => ({
     justifyContent: "center",
     backgroundColor: theme.colorAccent,
     borderRadius: "30px",
-    "& > a": {
-      height: 46,
+    "& > a > svg": {
+      width: 45,
+      height: 45,
+    },
+  },
+  "@media only screen and (min-width: 768px)": {
+    icon: {
+      width: "90px",
+      height: "90px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: theme.colorAccent,
+      borderRadius: "45px",
+      "& > a > svg": {
+        width: 60,
+        height: 60,
+      },
     },
   },
 }));

@@ -24,7 +24,7 @@ const Projects = (props) => {
 const useStyles = createUseStyles((theme) => ({
   page: {
     backgroundColor: theme.colorSecondary,
-    minheight: "90vh",
+    minHeight: "90vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

@@ -43,6 +43,7 @@ const useStyles = createUseStyles((theme) => ({
     minHeight: "90vh",
     display: "flex",
     flexDirection: "column",
+    justifyContent: "space-evenly",
     color: theme.colorSecondary,
     transition: [["background-color", "0.2s", "ease"]],
     "& > *": {
@@ -50,16 +51,16 @@ const useStyles = createUseStyles((theme) => ({
     },
     "& > span": {
       marginTop: "2rem",
-      height: "30vh",
-      width: "30vh",
+      height: "60vmin",
+      width: "60vmin",
       backgroundColor: theme.colorAccent,
-      borderRadius: "15vh",
+      borderRadius: "30vmin",
       "& > img": {
-        height: "28vh",
-        width: "28vh",
+        height: "56vmin",
+        width: "56vmin",
         position: "relative",
-        top: "1vh",
-        left: "1vh",
+        top: "2vmin",
+        left: "2vmin",
         borderRadius: "50%",
       },
     },
@@ -84,6 +85,7 @@ const useStyles = createUseStyles((theme) => ({
     "& > hr": {
       width: "33vw",
       borderTop: [[2, "solid", theme.colorHighlight]],
+      margin: "0.5rem 1rem",
     },
   },
   links: {
@@ -103,6 +105,7 @@ const useStyles = createUseStyles((theme) => ({
     display: "flex",
     margin: 0,
     marginTop: "auto",
+    width: "98vw",
     justifyContent: "space-between",
     overflow: "visible",
     "& > p": {
@@ -133,6 +136,43 @@ const useStyles = createUseStyles((theme) => ({
     },
     "100%": {
       transform: "translatey(0px)",
+    },
+  },
+  "@media only screen and (min-width: 768px)": {
+    page: {
+      alignItems: "center",
+      justifyContent: "space-evenly",
+      "& > span": {
+        height: "60vmin",
+        width: "60vmin",
+        borderRadius: "30vmin",
+        "& > img": {
+          height: "56vmin",
+          width: "56vmin",
+          top: "2vmin",
+          left: "2vmin",
+        },
+      },
+    },
+    links: {
+      minWidth: "50vmin",
+    },
+  },
+  "@media only screen and (min-width: 1367px)": {
+    page: {
+      alignItems: "center",
+      justifyContent: "space-evenly",
+      "& > span": {
+        height: "40vmin",
+        width: "40vmin",
+        borderRadius: "20vmin",
+        "& > img": {
+          height: "36vmin",
+          width: "36vmin",
+          top: "2vmin",
+          left: "2vmin",
+        },
+      },
     },
   },
 }));

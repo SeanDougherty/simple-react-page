@@ -13,12 +13,9 @@ const Collapsible = ({ children, ...props }) => {
   };
   return (
     <div className={classes.collapsible}>
-      <div className={classes.title}>
+      <div className={classes.title} onClick={expandHandler}>
         {title}
-        <DownArrow
-          className={isExpanded ? "expanded" : ""}
-          onClick={expandHandler}
-        />
+        <DownArrow className={isExpanded ? "expanded" : ""} />
       </div>
       <div className={`${classes.body} ${isExpanded ? "expanded" : ""}`}>
         {body}

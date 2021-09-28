@@ -18,6 +18,20 @@ const Github = (props) => {
 const useStyles = createUseStyles((theme) => ({
   icon: {
     minWidth: "60px",
+    "& > a > svg": {
+      width: 60,
+      height: 60,
+    },
+  },
+  "@media only screen and (min-width: 768px)": {
+    icon: {
+      width: "90px",
+      height: "90px",
+      "& > a > svg": {
+        width: 90,
+        height: 90,
+      },
+    },
   },
 }));
 
