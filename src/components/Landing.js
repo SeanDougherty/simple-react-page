@@ -16,8 +16,13 @@ const Landing = (props) => {
       <hr />
       <h1>Sean Dougherty</h1>
       <h2>Software Engineer</h2>
-      <h4>Email: inbox@seandougherty.dev</h4>
-      <h4>Phone Number: (913) 424-7703</h4>
+      <h4>
+        Email:{" "}
+        <a href="mailto:inbox@seandougherty.dev">inbox@seandougherty.dev</a>
+      </h4>
+      <h4>
+        Phone Number: <a href="+19134247703">(913) 424-7703</a>
+      </h4>
       <div className={classes.links}>
         <Github />
         <LinkedIn />
@@ -35,7 +40,7 @@ const Landing = (props) => {
 const useStyles = createUseStyles((theme) => ({
   page: {
     backgroundColor: theme.colorPrimary,
-    height: "90vh",
+    minHeight: "90vh",
     display: "flex",
     flexDirection: "column",
     color: theme.colorSecondary,
@@ -70,6 +75,11 @@ const useStyles = createUseStyles((theme) => ({
       fontWeight: "normal",
       marginTop: 0,
       marginBottom: "0.5rem",
+      "& > a": {
+        textDecoration: "none",
+        color: theme.colorSecondary,
+        paddingLeft: "0.5rem",
+      },
     },
     "& > hr": {
       width: "33vw",
@@ -87,6 +97,9 @@ const useStyles = createUseStyles((theme) => ({
     fontSize: "1.25rem",
   },
   footer: {
+    position: "sticky",
+    bottom: 0,
+    backgroundColor: theme.colorPrimary,
     display: "flex",
     margin: 0,
     marginTop: "auto",
