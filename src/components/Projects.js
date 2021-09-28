@@ -11,6 +11,7 @@ const Projects = (props) => {
 
   return (
     <section className={classes.page}>
+      <h2>Previous Projects</h2>
       <APECS />
       <ProxySignature />
       <WebCrawler />
@@ -24,6 +25,7 @@ const Projects = (props) => {
 const useStyles = createUseStyles((theme) => ({
   page: {
     backgroundColor: theme.colorSecondary,
+    position: "relative",
     minHeight: "90vh",
     display: "flex",
     flexDirection: "column",
@@ -32,6 +34,15 @@ const useStyles = createUseStyles((theme) => ({
     color: theme.colorPrimary,
     transition: [["background-color", "0.2s", "ease"]],
     padding: "3rem 0",
+    "& > h2": {
+      position: "absolute",
+      top: 0,
+      left: "3%",
+      margin: [["0.75rem", "0", "0.5rem", "1rem"]],
+      padding: [[0, 9, 3, 0]],
+      borderBottom: [[theme.colorPrimary, "solid", 2]],
+      borderRight: [[theme.colorPrimary, "solid", 2]],
+    },
   },
   "@media only screen and (min-width: 768px)": {
     page: {
