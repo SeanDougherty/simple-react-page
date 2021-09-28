@@ -15,7 +15,9 @@ const Collapsible = ({ children, ...props }) => {
     <div className={classes.collapsible}>
       <div className={classes.title} onClick={expandHandler}>
         {title}
-        <DownArrow className={isExpanded ? "expanded" : ""} />
+        <div className={classes.expandContainer}>
+          <DownArrow className={isExpanded ? "expanded" : ""} />
+        </div>
       </div>
       <div className={`${classes.body} ${isExpanded ? "expanded" : ""}`}>
         {body}
@@ -40,17 +42,27 @@ const useStyles = createUseStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
     paddingBottom: "0.5rem",
+    height: 54,
+  },
+  expandContainer: {
+    backgroundColor: theme.colorAccent,
+    bottom: "-19px",
+    position: "relative",
+    alignSelf: "center",
+    marginRight: 16,
+    height: 30,
+    padding: [0, "1rem"],
+    borderRadius: [[10, 10, 0, 0]],
+    cursor: "pointer",
     "& > svg": {
-      alignSelf: "center",
       width: 20,
-      padding: [0, "7vw"],
       overflow: "visible",
       transition: [["transform", "2s", "ease"]],
       "&.expanded": {
         transform: "rotate(180deg)",
       },
       "& > g > path": {
-        fill: [[theme.colorPrimary], "!important"],
+        fill: [[theme.colorDarkest], "!important"],
       },
     },
   },

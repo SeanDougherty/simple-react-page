@@ -4,14 +4,14 @@ import { ReactComponent as Icon } from "../../resources/cv.svg";
 const CV = (props) => {
   const classes = useStyles();
   return (
-    <div className={classes.icon}>
-      <a
-        href="https://drive.google.com/file/d/1TIi0mNwrfWISJ61oD-ABq9qrf7rkkm6A/view?usp=sharing"
-        target="_blank"
-        rel="noreferrer">
+    <a
+      href="https://drive.google.com/file/d/1TIi0mNwrfWISJ61oD-ABq9qrf7rkkm6A/view?usp=sharing"
+      target="_blank"
+      rel="noreferrer">
+      <div className={classes.icon}>
         <Icon />
-      </a>
-    </div>
+      </div>
+    </a>
   );
 };
 
@@ -24,7 +24,7 @@ const useStyles = createUseStyles((theme) => ({
     justifyContent: "center",
     backgroundColor: theme.colorAccent,
     borderRadius: "30px",
-    "& > a > svg": {
+    "& > svg": {
       width: 45,
       height: 45,
     },
@@ -38,7 +38,7 @@ const useStyles = createUseStyles((theme) => ({
       justifyContent: "center",
       backgroundColor: theme.colorAccent,
       borderRadius: "45px",
-      "& > a > svg": {
+      "& > svg": {
         width: 60,
         height: 60,
       },

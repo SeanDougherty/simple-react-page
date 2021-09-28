@@ -34,37 +34,39 @@ const About = (props) => {
           ornare suspendisse sed nisi.
         </p>
       </div>
-      <Collapsible>
-        <h2>My story</h2>
-        <hr />
-        <p>
-          I earned a B.S. in Biomedical Engineering with a minor in Computer
-          Science at Saint Louis University in 2017. While spending the
-          following two years co-founding and leading software development for
-          the local St. Louis digital health startup, phas3, I also joined Saint
-          Louis University's M.S. Computer Science program.
-        </p>
-        <p>
-          My time in the healthcare sector had driven my focus on usability,
-          quality, and data privacy. My head-first entrance into the software
-          development industry sparked a passion for software development,
-          systems design, and technical leadership that continues to this day.
-          Joining SLU's graduate program gave me an opportunity to learn in the
-          classroom and apply knowledge in the office.
-        </p>
-        <p>
-          In 2019, I left phas3 to pursue a career in research within Dr. Reza
-          Tourani's lab. Maintaining a position as Dr. Tourani's graduate
-          research assistant and senior graduate researcher of the lab, I led
-          efforts in Serverless Design, Adversarial Machine Learning, and Edge
-          Computing Security.
-        </p>
-        <p>
-          Since graduating, my thesis has recently been accepted to one of the
-          highest impact international Computer Science conferences, ACM
-          Computer and Communications Security (ACM CCS).
-        </p>
-      </Collapsible>
+      <div className={classes.story}>
+        <Collapsible>
+          <h2>My story</h2>
+          <hr />
+          <p>
+            I earned a B.S. in Biomedical Engineering with a minor in Computer
+            Science at Saint Louis University in 2017. While spending the
+            following two years co-founding and leading software development for
+            the local St. Louis digital health startup, phas3, I also joined
+            Saint Louis University's M.S. Computer Science program.
+          </p>
+          <p>
+            My time in the healthcare sector had driven my focus on usability,
+            quality, and data privacy. My head-first entrance into the software
+            development industry sparked a passion for software development,
+            systems design, and technical leadership that continues to this day.
+            Joining SLU's graduate program gave me an opportunity to learn in
+            the classroom and apply knowledge in the office.
+          </p>
+          <p>
+            In 2019, I left phas3 to pursue a career in research within Dr. Reza
+            Tourani's lab. Maintaining a position as Dr. Tourani's graduate
+            research assistant and senior graduate researcher of the lab, I led
+            efforts in Serverless Design, Adversarial Machine Learning, and Edge
+            Computing Security.
+          </p>
+          <p>
+            Since graduating, my thesis has recently been accepted to one of the
+            highest impact international Computer Science conferences, ACM
+            Computer and Communications Security (ACM CCS).
+          </p>
+        </Collapsible>
+      </div>
       <p>
         I am currently seeking a position as a Software Engineer in the United
         States.
@@ -80,6 +82,7 @@ const useStyles = createUseStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-evenly",
     minHeight: "80vh",
+    maxWidth: "100vw",
     color: theme.colorPrimary,
     transition: [["background-color", "0.2s", "ease"]],
     "& > *": {
@@ -100,6 +103,7 @@ const useStyles = createUseStyles((theme) => ({
       marginRight: "0.25rem",
     },
     "& > p:last-of-type": {
+      minWidth: "90vw",
       minHeight: "3rem",
       marginRight: "1rem",
       marginBottom: "3vh",
@@ -124,6 +128,7 @@ const useStyles = createUseStyles((theme) => ({
       marginBottom: 0,
     },
   },
+  story: {},
   header: {
     display: "flex",
     alignItems: "center",
@@ -143,6 +148,24 @@ const useStyles = createUseStyles((theme) => ({
     },
     "& > div > svg:last-of-type": {
       marginRight: "1rem",
+    },
+  },
+  "@media only screen and (min-width: 768px)": {
+    page: {
+      minHeight: "60vh",
+      flexDirection: "row",
+      flexFlow: "wrap",
+      "& > p:last-of-type": {
+        fontSize: "1.5rem",
+        fontWeight: "500",
+      },
+    },
+    bio: {
+      width: "45vw",
+    },
+    story: {
+      marginTop: "5vh",
+      width: "45vw",
     },
   },
 }));
