@@ -1,5 +1,7 @@
 import ProjectFrame from "../Utility/ProjectFrame";
 import { ReactComponent as ICON } from "../../resources/webcrawler.svg";
+import { ReactComponent as Python } from "../../resources/python.svg";
+import { ReactComponent as Selenium } from "../../resources/selenium.svg";
 
 const title = "Multi-Proxied Web Crawler";
 const description =
@@ -11,7 +13,8 @@ const WebCrawler = (props) => {
       title={title}
       description={description}
       icon={<ICON />}
-      components={[<ICON />, <ICON />, <ICON />]}
+      components={[<Python />, <Selenium />]}
+      link={"https://github.com/seandough3rty/Multi-Proxied-WebCrawler"}
     />
   );
 };

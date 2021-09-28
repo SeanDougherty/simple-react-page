@@ -10,21 +10,38 @@ const ProjectFrame = (props) => {
   ));
 
   return (
-    <div className={classes.project}>
-      <div className={classes.header}>
-        <h3 className={classes.title}>{props.title}</h3>
-        <div className={classes.icon}>{props.icon}</div>
+    <a
+      className={classes.anchor}
+      href={props.link}
+      target="_blank"
+      rel="noreferrer">
+      <div className={classes.project}>
+        <div className={classes.header}>
+          <h3 className={classes.title}>{props.title}</h3>
+          <div className={classes.icon}>{props.icon}</div>
+        </div>
+        <div className={classes.body}>
+          <p className={classes.description}>{props.description}</p>
+          <div className={classes.components}>{components}</div>
+          <div className={classes.navigate}>{"< View Source Code />"}</div>
+        </div>
       </div>
-      <div className={classes.body}>
-        <p className={classes.description}>{props.description}</p>
-        <div className={classes.components}>{components}</div>
-        <div className={classes.navigate}></div>
-      </div>
-    </div>
+    </a>
   );
 };
 
 const useStyles = createUseStyles((theme) => ({
+  anchor: {
+    textDecoration: "none",
+    color: "inherit",
+    "&:hover $navigate": {
+      animationName: "$shake",
+      animationDuration: "0.3s",
+      animationIterationCount: "1",
+      animationTimingFunction: "ease",
+      animationDelay: "0s",
+    },
+  },
   project: {
     margin: "1rem 2rem",
     backgroundColor: theme.colorLightest,
@@ -61,6 +78,7 @@ const useStyles = createUseStyles((theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
+    padding: "0.25rem 0 1rem 0",
   },
   component: {
     height: 60,
@@ -68,6 +86,28 @@ const useStyles = createUseStyles((theme) => ({
     "& > *": {
       width: "100%",
       height: "100%",
+    },
+  },
+  navigate: {
+    textAlign: "center",
+    padding: "0.5rem",
+    margin: "0.5rem",
+  },
+  "@keyframes shake": {
+    "0%": {
+      transform: "rotate(0deg)",
+    },
+    "25%": {
+      transform: "rotate(5deg)",
+    },
+    "50%": {
+      transform: "rotate(0deg)",
+    },
+    "75%": {
+      transform: "rotate(-5deg)",
+    },
+    "100%": {
+      transform: "rotate(0deg)",
     },
   },
 }));

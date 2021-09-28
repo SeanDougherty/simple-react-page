@@ -1,5 +1,7 @@
 import ProjectFrame from "../Utility/ProjectFrame";
 import { ReactComponent as ICON } from "../../resources/graph.svg";
+import { ReactComponent as CPLUSPLUS } from "../../resources/cplusplus.svg";
+import OGDF from "../../resources/OGDF.png";
 
 const title = "Upwards Planar Graph Embedding";
 const description =
@@ -11,7 +13,11 @@ const UpwardsPlanarity = (props) => {
       title={title}
       description={description}
       icon={<ICON />}
-      components={[<ICON />, <ICON />, <ICON />]}
+      components={[
+        <CPLUSPLUS />,
+        <img src={OGDF} alt="Open Graph Drawing Framework" />,
+      ]}
+      link={"https://github.com/seandough3rty/Upwards-Planarity"}
     />
   );
 };

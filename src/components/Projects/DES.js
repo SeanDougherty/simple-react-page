@@ -1,5 +1,6 @@
 import ProjectFrame from "../Utility/ProjectFrame";
 import { ReactComponent as ICON } from "../../resources/des.svg";
+import { ReactComponent as CPLUSPLUS } from "../../resources/cplusplus.svg";
 
 const title = "myDES";
 const description =
@@ -11,7 +12,8 @@ const DES = (props) => {
       title={title}
       description={description}
       icon={<ICON />}
-      components={[<ICON />, <ICON />, <ICON />]}
+      components={[<CPLUSPLUS />]}
+      link={"https://github.com/seandough3rty/myDES"}
     />
   );
 };

@@ -1,5 +1,10 @@
 import ProjectFrame from "../Utility/ProjectFrame";
 import { ReactComponent as ICON } from "../../resources/sign.svg";
+import { ReactComponent as Python } from "../../resources/python.svg";
+import { ReactComponent as Charm } from "../../resources/charm.svg";
+import { ReactComponent as PBC } from "../../resources/pbc.svg";
+// import pbc from "../../resources/pbc.png";
+// <img src={geni} alt="GENI testbed" />,
 
 const title = "Practical Proxy Signature";
 const description =
@@ -11,7 +16,10 @@ const ProxySignature = (props) => {
       title={title}
       description={description}
       icon={<ICON />}
-      components={[<ICON />, <ICON />, <ICON />]}
+      components={[<Python />, <Charm />, <PBC />]}
+      link={
+        "https://github.com/seandough3rty/A-Practical-Proxy-Signature-Scheme"
+      }
     />
   );
 };
