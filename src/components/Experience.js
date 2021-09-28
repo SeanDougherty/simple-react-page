@@ -105,17 +105,19 @@ const Experience = (props) => {
           className={
             classes.thesis + " " + classes.rightEvent + " " + classes.event
           }>
-          Thesis accepted to high-impact international security conference (ACM
-          CCS 2021).
+          Thesis (named APECS) accepted to high-impact international security
+          conference (ACM CCS 2021).
         </p>
       </FadeIntoViewThin>
       {/* </span> */}
+      <div className={classes.disclaimer}>* events are placed roughly.</div>
     </section>
   );
 };
 
 const useStyles = createUseStyles((theme) => ({
   page: {
+    position: "relative",
     backgroundColor: theme.colorPrimary,
     minHeight: "90vh",
     display: "grid",
@@ -239,6 +241,11 @@ const useStyles = createUseStyles((theme) => ({
     "& > svg > g > path:first-of-type": {
       fill: [[theme.colorSecondary], "!important"],
     },
+  },
+  disclaimer: {
+    position: "absolute",
+    top: 0,
+    right: "3%",
   },
 }));
 
