@@ -33,6 +33,13 @@ const useStyles = createUseStyles((theme) => ({
     transition: [["background-color", "0.2s", "ease"]],
     padding: "3rem 0",
   },
+  "@media only screen and (min-width: 768px)": {
+    page: {
+      minHeight: "60vh",
+      flexDirection: "row",
+      flexFlow: "wrap",
+    },
+  },
 }));
 
 export default Projects;

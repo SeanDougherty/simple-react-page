@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import ShimmyOnViewThin from "./ShimmyOnViewThin";
 
 const ProjectFrame = (props) => {
   const classes = useStyles();
@@ -23,7 +24,9 @@ const ProjectFrame = (props) => {
         <div className={classes.body}>
           <p className={classes.description}>{props.description}</p>
           <div className={classes.components}>{components}</div>
-          <div className={classes.navigate}>{"< View Source Code />"}</div>
+          <ShimmyOnViewThin delay={700}>
+            <div className={classes.navigate}>{"< View Source Code />"}</div>
+          </ShimmyOnViewThin>
         </div>
       </div>
     </a>
@@ -48,6 +51,7 @@ const useStyles = createUseStyles((theme) => ({
     color: theme.colorDarkest,
     border: [[theme.colorLightest, "3px", "solid"]],
     borderRadius: 10,
+    boxShadow: "4px 4px 10px 4px  rgba(0,0,0,1)",
   },
   header: {
     display: "flex",
@@ -108,6 +112,18 @@ const useStyles = createUseStyles((theme) => ({
     },
     "100%": {
       transform: "rotate(0deg)",
+    },
+  },
+  "@media only screen and (min-width: 768px)": {
+    anchor: {
+      width: "45vw",
+      margin: [["3rem", "1vw", "3rem", "1vw"]],
+    },
+  },
+  "@media only screen and (min-width: 1366px)": {
+    anchor: {
+      width: "30vw",
+      margin: [["3rem", "1vw", "3rem", "1vw"]],
     },
   },
 }));
