@@ -1,13 +1,19 @@
 import { ThemeProvider } from "theming";
-import { useSelector } from "react-redux";
-
-const THEMES = {
-  LIGHT: 0,
-  DARK: 1,
-};
+import { useLayoutEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { uiActions, THEMES } from "../../store/ui-slice";
 
 const ThemeSelector = ({ children, ...props }) => {
+  const dispatch = useDispatch();
   let theme_id = useSelector((store) => store.ui.theme_id);
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  useLayoutEffect(() => {
+    if (prefersDark) {
+      dispatch(uiActions.themeSet(THEMES.DARK));
+    }
+  }, []);
+
   return <ThemeProvider theme={getTheme(theme_id)}>{children}</ThemeProvider>;
 };
 
@@ -40,5 +46,4 @@ const dark_theme = {
   colorDarkest: "#051622",
 };
 
-export { THEMES };
 export default ThemeSelector;

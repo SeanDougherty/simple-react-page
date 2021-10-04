@@ -26,12 +26,23 @@ const About = (props) => {
         </div>
         <hr />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl
-          suscipit adipiscing bibendum est ultricies integer quis. Praesent
-          semper feugiat nibh sed pulvinar proin gravida. Interdum consectetur
-          libero id faucibus nisl tincidunt eget. Tortor vitae purus faucibus
-          ornare suspendisse sed nisi.
+          I’m a Software Engineer and Computer Science Researcher located in the
+          United States. I have spent the past few years working on projects
+          focused on progressive technology, user privacy, and creating
+          intuitive, dynamic user experiences. Highly-driven person, problem
+          solver, and highly collaborative individual with a knack for technical
+          problems.
+          <br />
+          <br />
+          Fan of meditative practices, outdoor activities, regenerative
+          agriculture, and scuba diving. Known to geek out about coffee and to
+          enjoy the occasional smash bros game.
+          <br />
+          <br />
+          Interested in the entire spectrum of Software Engineering (with
+          special interests in edge computing, serverless design, and
+          sustainable tech). Hell bent on working on ambitious projects with
+          positive people.
         </p>
       </div>
       <div className={classes.story}>
@@ -48,16 +59,16 @@ const About = (props) => {
           <p>
             My time in the healthcare sector had driven my focus on usability,
             quality, and data privacy. My head-first entrance into the software
-            development industry sparked a passion for software development,
-            systems design, and technical leadership that continues to this day.
-            Joining SLU's graduate program gave me an opportunity to learn in
-            the classroom and apply knowledge in the office.
+            development industry sparked a passion for computer science, systems
+            design, and technical leadership that continues to this day. Joining
+            SLU's graduate program gave me an opportunity to learn in the
+            classroom and apply knowledge in the office.
           </p>
           <p>
             In 2019, I left phas3 to pursue a career in research within Dr. Reza
             Tourani's lab. Maintaining a position as Dr. Tourani's graduate
-            research assistant and senior graduate researcher of the lab, I led
-            efforts in Serverless Design, Adversarial Machine Learning, and Edge
+            research assistant and senior researcher of the lab, I led efforts
+            in Serverless Design, Adversarial Machine Learning, and Edge
             Computing Security.
           </p>
           <p>

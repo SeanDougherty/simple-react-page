@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import ThemeSelector from "./components/Utility/ThemeSelector";
 import ThemeToggler from "./components/Buttons/ThemeToggler";

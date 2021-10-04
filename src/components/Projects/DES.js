@@ -4,7 +4,7 @@ import { ReactComponent as CPLUSPLUS } from "../../resources/cplusplus.svg";
 
 const title = "myDES";
 const description =
-  "This is an implementation of the Date Encryption Standard symmetric key algorithm. Complete with padding and key/iv generation.";
+  "This is my implementation of the Date Encryption Standard symmetric key algorithm. Complete with padding and key/iv generation.";
 
 const DES = (props) => {
   return (

@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { THEMES } from "../components/Utility/ThemeSelector";
+
+const THEMES = {
+  LIGHT: 0,
+  DARK: 1,
+};
 
 const uiSlice = createSlice({
   name: "ui",
@@ -17,7 +21,7 @@ const uiSlice = createSlice({
       }
     },
     themeSet(state, action) {
-      const selected = action.payload.theme_id;
+      const selected = action.payload;
       if (Object.values(THEMES).includes(selected)) {
         state.theme_id = selected;
       } else {
@@ -27,6 +31,7 @@ const uiSlice = createSlice({
   },
 });
 
+export { THEMES };
 export const uiActions = uiSlice.actions;
 
 export default uiSlice;
