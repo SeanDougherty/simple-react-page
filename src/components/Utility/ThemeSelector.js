@@ -12,6 +12,7 @@ const ThemeSelector = ({ children, ...props }) => {
     if (prefersDark) {
       dispatch(uiActions.themeSet(THEMES.DARK));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <ThemeProvider theme={getTheme(theme_id)}>{children}</ThemeProvider>;
