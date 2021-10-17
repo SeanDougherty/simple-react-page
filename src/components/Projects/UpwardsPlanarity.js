@@ -1,7 +1,7 @@
 import ProjectFrame from "../Utility/ProjectFrame";
 import { ReactComponent as ICON } from "../../resources/graph.svg";
 import { ReactComponent as CPLUSPLUS } from "../../resources/cplusplus.svg";
-import OGDF from "../../resources/OGDF.png";
+import OGDF from "../../resources/OGDF.webp";
 
 const title = "Upwards Planar Graph Embedding";
 const description =

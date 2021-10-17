@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import sean from "../resources/sean.jpg";
+import sean from "../resources/sean.webp";
 import { ReactComponent as DownArrow } from "../resources/down-arrow.svg";
 import Github from "./Buttons/Github";
 import LinkedIn from "./Buttons/LinkedIn";
@@ -16,13 +16,13 @@ const Landing = (props) => {
       <hr />
       <h1>Sean Dougherty</h1>
       <h2>Software Engineer</h2>
-      <h4>
+      <h3>
         Email:{" "}
         <a href="mailto:inbox@seandougherty.dev">inbox@seandougherty.dev</a>
-      </h4>
-      <h4>
+      </h3>
+      <h3>
         Phone Number: <a href="+19134247703">(913) 424-7703</a>
-      </h4>
+      </h3>
       <div className={classes.links}>
         <Github />
         <LinkedIn />
@@ -72,7 +72,7 @@ const useStyles = createUseStyles((theme) => ({
       marginTop: 0,
       marginBottom: "1rem",
     },
-    "& > h4": {
+    "& > h3": {
       fontWeight: "normal",
       marginTop: 0,
       marginBottom: "0.5rem",
