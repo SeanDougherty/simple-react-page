@@ -2,7 +2,7 @@ import ProjectFrame from "../Utility/ProjectFrame";
 import { ReactComponent as ICON } from "../../resources/apecs.svg";
 import { ReactComponent as GRPC } from "../../resources/grpc.svg";
 import { ReactComponent as CPLUSPLUS } from "../../resources/cplusplus.svg";
-import geni from "../../resources/GENI.png";
+import geni from "../../resources/GENI.webp";
 import { createUseStyles } from "react-jss";
 
 const title = "APECS";
