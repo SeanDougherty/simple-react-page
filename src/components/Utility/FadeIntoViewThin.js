@@ -21,8 +21,9 @@ const FadeIntoViewThin = ({ children, ...props }) => {
         }
       });
     });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+    const domRefCurrent = domRef.current;
+    observer.observe(domRefCurrent);
+    return () => observer.unobserve(domRefCurrent);
   }, []);
 
   if (React.Children.only(children)) {
