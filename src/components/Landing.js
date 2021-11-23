@@ -1,5 +1,6 @@
 import { createUseStyles } from "react-jss";
 import sean from "../resources/sean.webp";
+import sean_alt from "../resources/sean.jpg";
 import { ReactComponent as DownArrow } from "../resources/down-arrow.svg";
 import Github from "./Buttons/Github";
 import LinkedIn from "./Buttons/LinkedIn";
@@ -10,7 +11,10 @@ const Landing = (props) => {
   return (
     <section className={classes.page}>
       <span id="profile-photo">
-        <img src={sean} alt="Sean Dougherty" />
+        <picture>
+          <source type="image/webp" srcSet={sean} />
+          <img src={sean_alt} alt="Sean Dougherty" />
+        </picture>
       </span>
       <p className={classes.greeting}>Hi, my name is </p>
       <hr />
@@ -55,7 +59,7 @@ const useStyles = createUseStyles((theme) => ({
       width: "60vmin",
       backgroundColor: theme.colorAccent,
       borderRadius: "30vmin",
-      "& > img": {
+      "& img": {
         height: "56vmin",
         width: "56vmin",
         position: "relative",
@@ -146,7 +150,7 @@ const useStyles = createUseStyles((theme) => ({
         height: "60vmin",
         width: "60vmin",
         borderRadius: "30vmin",
-        "& > img": {
+        "& img": {
           height: "56vmin",
           width: "56vmin",
           top: "2vmin",
@@ -166,7 +170,7 @@ const useStyles = createUseStyles((theme) => ({
         height: "40vmin",
         width: "40vmin",
         borderRadius: "20vmin",
-        "& > img": {
+        "& img": {
           height: "36vmin",
           width: "36vmin",
           top: "2vmin",
