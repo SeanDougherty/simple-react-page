@@ -6,6 +6,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import { createUseStyles } from "react-jss";
+import APECS from "./components/APECS";
 
 function App() {
   const classes = useStyles();
@@ -15,6 +16,7 @@ function App() {
         <Landing />
         <About />
         <Experience />
+        <APECS />
         <Projects />
         <ThemeToggler />
       </div>
@@ -24,8 +26,10 @@ function App() {
 
 const useStyles = createUseStyles((theme) => ({
   singlePage: {
+    position: "relative",
     display: "flex",
     flexDirection: "column",
+    overflow: "auto",
   },
 }));
 

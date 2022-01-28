@@ -17,19 +17,26 @@ const ThemeToggler = (props) => {
   }
 
   return (
-    <div className={classes.wrapper}>
-      <p>Theme: {themeName}</p>
-      <label className={classes.toggleSwitch}>
-        <input type="checkbox" checked={isToggled} onChange={toggleHandler} />
-        <span className={classes.switch} />
-      </label>
+    <div className={classes.container}>
+      <div className={classes.wrapper}>
+        <p>Theme: {themeName}</p>
+        <label className={classes.toggleSwitch}>
+          <input type="checkbox" checked={isToggled} onChange={toggleHandler} />
+          <span className={classes.switch} />
+        </label>
+      </div>
     </div>
   );
 };
 
 const useStyles = createUseStyles((theme) => ({
-  wrapper: {
+  container: {
     position: "fixed",
+    right: 10,
+    top: 10,
+  },
+  wrapper: {
+    position: "sticky",
     right: 10,
     top: 10,
     fontSize: "0.75rem",
