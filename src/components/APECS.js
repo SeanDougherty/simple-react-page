@@ -47,6 +47,13 @@ const APECS = (props) => {
           of information and computation from device to device and their shared
           context of understanding.
         </p>
+        <div className={classes.modelcontainer}>
+          <h5>System Model</h5>
+          <picture className={classes.systemmodel}>
+            <source type="image/webp" srcSet={SystemModel} />
+            <img src={SystemModel} alt="APECS System Model" />
+          </picture>
+        </div>
         <p>
           However, both edge computing and pervasive edge computing system
           designs suffer from a major shortcoming and many technologies that
@@ -65,13 +72,6 @@ const APECS = (props) => {
           cloud. These solutions negate the latency benefits of positioning
           services at the edge.
         </p>
-        <div className={classes.modelcontainer}>
-          <h5>System Model</h5>
-          <picture className={classes.systemmodel}>
-            <source type="image/webp" srcSet={SystemModel} />
-            <img src={SystemModel} alt="APECS System Model" />
-          </picture>
-        </div>
         <p>
           In this thesis a first of it’s kind edge computing security protocol
           is detailed, tested, and proven as a solution to this major security
@@ -112,7 +112,7 @@ const APECS = (props) => {
       </div>
       <div className={classes.figuredetails}>
         <Collapsible>
-          <h2>System Interaction Details (See figure above)</h2>
+          <h2>System Model Details (See figure above)</h2>
           <p>
             As shown in Step (1) of the above figure, each service provider
             initiates its AIA (Attribute Issuing Authority), hosted as a virtual
@@ -135,6 +135,9 @@ const APECS = (props) => {
           </p>
         </Collapsible>
       </div>
+      <span className={classes.pdflink}>
+        <a href="https://www.cs.nmsu.edu/~roopa/apecs.pdf">Link to PDF</a>
+      </span>
     </section>
   );
 };
@@ -157,50 +160,103 @@ const useStyles = createUseStyles((theme) => ({
       fontSize: "2rem",
     },
     "& > h2": {
-      margin: [["0.75rem", "0", "0.75rem", "1rem"]],
-      marginTop: "3rem",
+      margin: [["0.75rem", "0.75rem", "0.75rem", "1rem"]],
       padding: [[0, 9, 3, 0]],
+      marginTop: "3rem",
       borderBottom: [[theme.colorPrimary, "solid", 2]],
       borderRight: [[theme.colorPrimary, "solid", 2]],
     },
   },
   description: {
+    display: "flex",
+    flexDirection: "column",
     fontSize: "1.2rem",
     padding: [["1%", "5%", "1%", "5%"]],
     textIndent: "2rem",
-    columnCount: 3,
-    columnWidth: "30%",
+    "& p": {
+      padding: 0,
+      margin: [["30px", "20px", "30px", "20px"]],
+    },
+  },
+  pdflink: {
+    backgroundColor: theme.colorAccent,
+    textAlign: "center",
+    width: "60%",
+    marginTop: "2vh",
+    padding: [["15px", "15px"]],
+    borderRadius: "5px",
+    fontSize: "1.25rem",
+    "& a": {
+      color: theme.colorDarkest,
+    },
+  },
+  modelcontainer: {
+    backgroundColor: theme.colorAccent,
+    color: theme.colorDarkest,
+    borderRadius: [["65px", "65px", "65px", "65px"]],
+    margin: [["1rem", "4vw", "1rem", "4vw"]],
+    textIndent: 0,
+    "& picture": {
+      display: "inline-flex",
+    },
     "& img": {
-      width: "100%",
-      height: "28%",
+      width: "90vw",
+      height: "90vw",
+      alignSelf: "center",
+      justifySelf: "center",
+      margin: "0.5vmin",
     },
     "& h5": {
-      padding: "0.5rem",
+      padding: "0.25rem",
       margin: "0.5rem",
       textAlign: "center",
       textIndent: 0,
     },
-    "& p": {
-      padding: 0,
-      margin: 0,
-    },
-  },
-  modelcontainer: {
-    backgroundColor: theme.colorLightest,
-    color: theme.colorDarkest,
-    borderRadius: "30px",
-    marginBottom: "1rem",
-    marginTop: "1rem",
   },
   figuredetails: {
     width: "90%",
     paddingBottom: "2%",
+    margin: [[0, "5%"]],
   },
   "@media only screen and (min-width: 768px)": {
     page: {
       minHeight: "60vh",
       flexDirection: "row",
       flexFlow: "wrap",
+      "& h2": {
+        margin: [["0.75rem", "0", "0.75rem", "1rem"]],
+      },
+    },
+    description: {
+      display: "block",
+      position: "relative",
+    },
+    modelcontainer: {
+      display: "block",
+      float: "right",
+      backgroundColor: theme.colorAccent,
+      color: theme.colorDarkest,
+      borderRadius: [["65px", "65px", "65px", "65px"]],
+      margin: [["1rem", "0.5rem", "1rem", "1rem"]],
+      textIndent: 0,
+      "& picture": {
+        display: "inline-flex",
+      },
+      "& img": {
+        width: "35vw",
+        height: "35vw",
+        alignSelf: "center",
+        justifySelf: "center",
+        margin: "0.5vmin",
+      },
+    },
+  },
+  "@media only screen and (min-width: 1024px)": {
+    modelcontainer: {
+      "& img": {
+        width: "25vw",
+        height: "25vw",
+      },
     },
   },
 }));
