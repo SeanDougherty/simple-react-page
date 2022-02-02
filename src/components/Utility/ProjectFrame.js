@@ -3,6 +3,10 @@ import ShimmyOnViewThin from "./ShimmyOnViewThin";
 
 const ProjectFrame = (props) => {
   const classes = useStyles();
+  let linkMessage = "< View Source Code />";
+  if (props.customLinkMessage) {
+    linkMessage = props.customLinkMessage;
+  }
 
   const components = props.components.map((component, index) => (
     <div className={classes.component} key={props.title + "component" + index}>
@@ -25,7 +29,7 @@ const ProjectFrame = (props) => {
           <p className={classes.description}>{props.description}</p>
           <div className={classes.components}>{components}</div>
           <ShimmyOnViewThin delay={700}>
-            <div className={classes.navigate}>{"< View Source Code />"}</div>
+            <div className={classes.navigate}>{linkMessage}</div>
           </ShimmyOnViewThin>
         </div>
       </div>
