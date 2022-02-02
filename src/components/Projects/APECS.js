@@ -21,6 +21,7 @@ const APECS = (props) => {
         <GRPC classes={classes.grpc} />,
         <img src={geni} alt="GENI testbed" />,
       ]}
+      componentTips={["C++", "Google Remote Procedural Call", "GENI testbed"]}
       link={"https://github.com/seandough3rty/APECS"}
     />
   );

@@ -5,6 +5,7 @@ import CipherBreaker from "./Projects/CipherBreaker";
 import DES from "./Projects/DES";
 import ElectronMirror from "./Projects/ElectronMirror";
 import ProxySignature from "./Projects/ProxySignature";
+import SplitLearningAttack from "./Projects/SplitLearningAttack";
 import UpwardsPlanarity from "./Projects/UpwardsPlanarity";
 import WebCrawler from "./Projects/WebCrawler";
 
@@ -16,6 +17,7 @@ const Projects = (props) => {
       <h2>Previous Projects</h2>
       <APECS />
       <ElectronMirror />
+      <SplitLearningAttack />
       <AdventOfCode21 />
       <ProxySignature />
       <WebCrawler />

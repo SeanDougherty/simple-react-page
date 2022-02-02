@@ -17,6 +17,7 @@ const UpwardsPlanarity = (props) => {
         <CPLUSPLUS />,
         <img src={OGDF} alt="Open Graph Drawing Framework" />,
       ]}
+      componentTips={["C++", "Open Graph Drawing Framework"]}
       link={"https://github.com/seandough3rty/Upwards-Planarity"}
     />
   );
