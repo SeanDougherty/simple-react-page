@@ -14,6 +14,7 @@ const SplitLearningAttack = () => {
       description={description}
       icon={<ICON />}
       components={[<PYTHON />, <PYTORCH />]}
+      componentTips={["Python", "PyTorch"]}
       link={"#"}
       customLinkMessage="[Not currently public]"
     />

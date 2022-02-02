@@ -15,6 +15,7 @@ const ElectronMirror = (props) => {
       description={description}
       icon={<ICON />}
       components={[<REACT />, <TYPESCRIPT />, <ELECTRON />]}
+      componentTips={["React.js", "TypeScript", "Electron.js"]}
       link={"https://github.com/seandough3rty/APECS"}
     />
   );

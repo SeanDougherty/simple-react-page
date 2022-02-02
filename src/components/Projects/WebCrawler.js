@@ -14,6 +14,7 @@ const WebCrawler = (props) => {
       description={description}
       icon={<ICON />}
       components={[<Python />, <Selenium />]}
+      componentTips={["Python", "Selenium"]}
       link={"https://github.com/seandough3rty/Multi-Proxied-WebCrawler"}
     />
   );

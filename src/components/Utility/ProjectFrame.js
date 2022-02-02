@@ -9,7 +9,10 @@ const ProjectFrame = (props) => {
   }
 
   const components = props.components.map((component, index) => (
-    <div className={classes.component} key={props.title + "component" + index}>
+    <div
+      className={classes.component}
+      key={props.title + "component" + index}
+      data-tip={props.componentTips[index]}>
       {component}
     </div>
   ));
@@ -89,11 +92,41 @@ const useStyles = createUseStyles((theme) => ({
     padding: "0.25rem 0 1rem 0",
   },
   component: {
+    position: "relative",
     height: 60,
     width: 60,
     "& > *": {
       width: "100%",
       height: "100%",
+    },
+    "&:hover": {
+      marginTop: "1.5rem",
+    },
+    "&:hover:before": {
+      content: "attr(data-tip)",
+      backgroundColor: theme.colorAccent,
+      color: theme.colorDarkest,
+      padding: [["2px", "5px"]],
+      borderRadius: "5px",
+      top: "-1.75rem",
+      position: "absolute",
+      whiteSpace: "nowrap",
+      left: "50%",
+      transform: "translateX(-50%)",
+      zIndex: "99",
+    },
+    "&:hover:after": {
+      content: "",
+      backgroundColor: theme.colorAccent,
+      color: theme.colorDarkest,
+      padding: [["2px", "5px"]],
+      borderRadius: "5px",
+      top: "-1.75rem",
+      position: "absolute",
+      whiteSpace: "nowrap",
+      left: "50%",
+      transform: "translateX(-50%)",
+      zIndex: "99",
     },
   },
   navigate: {

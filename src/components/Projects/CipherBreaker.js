@@ -13,6 +13,7 @@ const CipherBreaker = (props) => {
       description={description}
       icon={<ICON />}
       components={[<CPLUSPLUS />]}
+      componentTips={["C++"]}
       link={"https://github.com/seandough3rty/Substitution-Cipher-Breaker"}
     />
   );

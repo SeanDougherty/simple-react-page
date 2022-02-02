@@ -13,6 +13,7 @@ const AdventOfCode21 = (props) => {
       description={description}
       icon={<ICON />}
       components={[<CPLUSPLUS />]}
+      componentTips={["C++"]}
       link={"https://github.com/seandough3rty/AdventOfCode2021"}
     />
   );
