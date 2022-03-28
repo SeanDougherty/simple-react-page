@@ -79,8 +79,8 @@ const About = (props) => {
         </Collapsible>
       </div>
       <p>
-        I am currently seeking a position as a Software Engineer in the United
-        States.
+        I am happy to announce that I have recently accepted a position as a
+        Software Engineer with Microsoft
       </p>
     </section>
   );

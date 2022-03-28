@@ -88,7 +88,7 @@ const APECS = (props) => {
           need for an “always-on” authentication server in the cloud.
           Additionally, APECS prevents access to encrypted content by both
           unauthorized edge servers and “honest-but-curious” cloud providers
-          (e.g. Google, Amazon, Microsoft). The advanced cryptographic tools
+          (e.g. Microsoft, Amazon, Google). The advanced cryptographic tools
           used by APECS enables fine-grained access control and further data
           privacy when compared with contemporary cloud and edge solutions.
         </p>
